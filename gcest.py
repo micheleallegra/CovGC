@@ -102,7 +102,7 @@ def GC(X, mask,lag,method='gcmi'):
 	nSo=np.shape(X)[0]
 	nTi=np.shape(X)[1]	
 
-	ind_t = np.ones((nTi-lag,lag+1))
+	ind_t = np.zeros((nTi-lag,lag+1))
 
 	gap = np.zeros(nTi) # frames after a gap
 
