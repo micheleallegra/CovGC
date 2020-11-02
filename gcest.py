@@ -106,7 +106,7 @@ def GC(X, mask,lag,method='gcmi'):
 
 	gap = np.zeros(nTi) # frames after a gap
 
-	nOrig=np.shape(mask)[1] # number of frames before motion scrubbing
+	nOrig=np.shape(mask)[0] # number of frames before motion scrubbing
 
 
 	ncut=0     # number of uncut frames util tt
@@ -136,8 +136,8 @@ def GC(X, mask,lag,method='gcmi'):
 	nPairs = nSo*(nSo-1)/2
  
 	# Init
-	GC    = np.zeros((nSo,nSO))
-	IC    = np.zeros((nSo,nSO))
+	GC    = np.zeros((nSo,nSo))
+	IC    = np.zeros((nSo,nSo))
  
 	# Normalisation coefficient for gaussian entropy
 	C = np.log(2*np.pi*np.exp(1));
